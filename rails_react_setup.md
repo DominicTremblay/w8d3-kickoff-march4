@@ -15,7 +15,7 @@ At the root of the project folder, type the following:
 
 Make sure create-react-app is installed globally:
 
-```npm i -g create-react-app```
+`npm i -g create-react-app`
 
 
 ## Ports
@@ -37,7 +37,8 @@ Make sure create-react-app is installed globally:
 
 Add a proxy to package.json:
 
-```{
+```
+{
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -56,7 +57,8 @@ Start the React Client with Yarn start
 
 Rails 5 with --api mode will prepare the setup for you. You just need to uncomment the following:
 
-```# Gemfile
+```
+# Gemfile
 gem 'rack-cors'
 
 # config/initializers/cors.rb
@@ -131,7 +133,8 @@ end
 - Install Axios
 - In ComponentDidMount, create a request with Axios:
 
-```componentDidMount() {
+```
+componentDidMount() {
   axios
     .get("http://localhost:3001/api/v1/resources.json")
     .then(response => {
