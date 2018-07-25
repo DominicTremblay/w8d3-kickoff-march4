@@ -98,7 +98,8 @@ Disable `require 'bootsnap/setup'` in config/boot.rb
 
 - In routes.rb:
 
-```namespace :api do
+```
+namespace :api do
     namespace :v1 do
       resources :name_of_resource
     end
