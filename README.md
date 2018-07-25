@@ -6,4 +6,4 @@ Welcome to the Final Project Kickoff!
 
 - [Rails React Setup](./rails_react_setup.md)
 
-- [Express React Setup](./express_react_setup)
+- [Express React Setup](./express_react_setup.md)
