@@ -4,11 +4,11 @@
 2.  Create a feature branch (feature/feature_name)
 3.  Update your branch with the latest changes from master
 
-a. git checkout master
-b. git pull origin master
-c. git checkout feature/feature_name (use git branch as needed)
-d. git merge master (merge master into the feature branch)
-e. resolve conflicts and commit changes
+. git checkout master
+. git pull origin master
+. git checkout feature/feature_name (use git branch as needed)
+. git merge master (merge master into the feature branch)
+. resolve conflicts and commit changes
 
 4.  Push the feature branch to github
 
