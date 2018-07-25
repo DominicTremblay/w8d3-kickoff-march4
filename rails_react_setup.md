@@ -112,7 +112,8 @@ end
 - Move the controller files into this folder
 - Add namespacing to controllers:
 
-```module Api::V1
+```
+module Api::V1
   
 	class NameController < ApplicationController
 
