@@ -32,7 +32,8 @@ npm install -g express-generator
 
 In knex.init
 
-```client: 'postgresql',
+```
+client: 'postgresql',
     connection: {
       host     : process.env.DB_HOST,
       user     : process.env.DB_USER,
@@ -43,14 +44,12 @@ In knex.init
     },
  ```
 
-
-
-
 ## Test a Route
 
 - Add some JSON objects in the user route for testing. Run the server and test the route.
 
-```res.json([
+```
+res.json([
 
 	{
 		id: 1,
@@ -69,7 +68,6 @@ In knex.init
 - app.use('/v1/users', usersRouter)
 
 
-
 ## Install the Front-End
 
 At the root of the project folder, type the following:
@@ -78,12 +76,13 @@ At the root of the project folder, type the following:
 
 Make sure create-react-app is installed globally:
 
-```npm i -g create-react-app```
+`npm i -g create-react-app`
 
 
 ## Add a Request in ComponentDidMount of App
 
-```import React, { Component } from 'react';
+```
+import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
@@ -110,10 +109,9 @@ class App extends Component {
 export default App;
 ```
 
-
-
 ## References
 
 [https://daveceddia.com/create-react-app-express-backend/](Create React App with an Express Backend)
 [https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/](Access-Control-Allow-Origin: Dealing with CORS Errors in React and Express)
+
 [https://daveceddia.com/deploy-react-express-app-heroku/](Deploy React and Express to Heroku)

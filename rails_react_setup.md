@@ -149,7 +149,7 @@ componentDidMount() {
 
 ## References
 
-[https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS](Cross-Origin Resource Sharing (CORS))
+[https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS](Cross-Origin Resource Sharing)
 [https://til.hashrocket.com/posts/4d7f12b213-rails-5-api-and-cors](Rails 5 API and CORS)
 [https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#configuring-the-proxy-manually](Configuring the Proxy Manually)
 [https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814](ReactJS + Ruby on Rails API + Heroku App)
