@@ -30,7 +30,11 @@ npm install -g express-generator
   const knex = require("knex")(knexConfig["development"]);
   require("dotenv").config();
 
-- install pg - npm install pg --save
+- # install pg - npm install pg --save
+- make sure migrations and sees are added to './db' folder
+- add dotenv (\* add to gitignore)
+- require knex and dotenv
+- install pg
 - create migrations (knex migrate:make migration_name)
 - create seeds
 
@@ -55,14 +59,15 @@ client: 'postgresql',
 ```
 res.json([
 
-	{
-		id: 1,
-		username: "greenarrow"
-	},
-	{
-		id: 2,
-		username: "ironfist"
-	}
+    {
+    	id: 1,
+    	username: "greenarrow"
+    },
+    {
+    	id: 2,
+    	username: "ironfist"
+    }
+
 ])
 ```
 
@@ -88,25 +93,25 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  state = {users: []}
+state = {users: []}
 
   componentDidMount() {
     fetch('/users')
       .then(res => res.json())
       .then(users => this.setState({ users }));
-  }
+    }
 
-  render() {
-    return (
-      <div className="App">
+    render() {
+      return (
+        <div className="App">
         <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-      </div>
-    );
-  }
-}
+          {this.state.users.map(user =>
+            <div key={user.id}>{user.username}</div>
+          )}
+        </div>
+      );
+      }
+    }
 
 export default App;
 ```
@@ -129,15 +134,15 @@ Add a proxy to package.json:
 
 ```
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3001"
-    }
-  },
-  ...
+"name": "client",
+"version": "0.1.0",
+"private": true,
+"proxy": {
+"/api": {
+"target": "http://localhost:3001"
+}
+},
+...
 ```
 
 ## References
@@ -145,4 +150,7 @@ Add a proxy to package.json:
 [https://daveceddia.com/create-react-app-express-backend/](Create React App with an Express Backend)
 [https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/](Access-Control-Allow-Origin: Dealing with CORS Errors in React and Express)
 
+<<<<<<< HEAD
+[https://daveceddia.com/deploy-react-express-app-heroku/](Deploy React and Express to Heroku)
+=======
 [https://daveceddia.com/deploy-react-express-app-heroku/](Deploy React and Express to Heroku)
