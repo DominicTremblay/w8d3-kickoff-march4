@@ -150,7 +150,4 @@ Add a proxy to package.json:
 [https://daveceddia.com/create-react-app-express-backend/](Create React App with an Express Backend)
 [https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/](Access-Control-Allow-Origin: Dealing with CORS Errors in React and Express)
 
-<<<<<<< HEAD
-[https://daveceddia.com/deploy-react-express-app-heroku/](Deploy React and Express to Heroku)
-=======
 [https://daveceddia.com/deploy-react-express-app-heroku/](Deploy React and Express to Heroku)
