@@ -6,13 +6,13 @@ npm install -g express-generator
 
 ## Install The Back-End
 
-- express final-project-name
+- express --view=ejs final-project-name
 - cd final-project-name && npm install
 - edit bin/www and change the port to 3001
-- add console.log to listen and add a start script
+- add console.log to onListening and add a start script
 - install nodemon:
 
-`npm install nodemon --save`
+`npm install nodemon --save-dev`
 
 - add local script to start nodemon with `npm run local`
 
@@ -31,9 +31,6 @@ npm install -g express-generator
   require("dotenv").config();
 
 - # install pg - npm install pg --save
-- make sure migrations and sees are added to './db' folder
-- add dotenv (\* add to gitignore)
-- require knex and dotenv
 - install pg
 - create migrations (knex migrate:make migration_name)
 - create seeds
@@ -86,6 +83,8 @@ Make sure create-react-app is installed globally:
 
 `npm i -g create-react-app`
 
+(make sure you have node 8.12.0)
+
 ## Add a Request in ComponentDidMount of App
 
 ```
@@ -96,7 +95,7 @@ class App extends Component {
 state = {users: []}
 
   componentDidMount() {
-    fetch('/users')
+    fetch('/api/v1/users')
       .then(res => res.json())
       .then(users => this.setState({ users }));
     }
@@ -134,14 +133,10 @@ Add a proxy to package.json:
 
 ```
 {
-"name": "client",
-"version": "0.1.0",
-"private": true,
-"proxy": {
-"/api": {
-"target": "http://localhost:3001"
-}
-},
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001",
 ...
 ```
 

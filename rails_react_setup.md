@@ -7,6 +7,8 @@
 
 `rails new . --api --database=postgresql -T --no-rdoc --no-ri`
 
+- configure database in database.yml
+
 ## Create React Client
 
 At the root of the project folder, type the following:
@@ -40,11 +42,7 @@ Add a proxy to package.json:
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3001"
-    }
-  },
+  "proxy": "http://localhost:3001",
   ...
 ```
 
@@ -85,9 +83,11 @@ Disable `require 'bootsnap/setup'` in config/boot.rb
 - generate models with rails g model
 - genereate controllers with rails g controller
 
-* Setup the relationships
-* run migrations
-* run seed
+`rails g controllers api/v1/users`
+
+- Setup the relationships
+- run migrations
+- run seed
 
 ## Setup The Routes
 
@@ -110,14 +110,10 @@ end
 - Add namespacing to controllers:
 
 ```
-module Api::V1
-
-	class NameController < ApplicationController
+class Api::V1::UsersController < ApplicationController
 
 		def index
 		end
-
-	end
 
 end
 ```
