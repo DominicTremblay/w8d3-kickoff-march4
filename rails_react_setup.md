@@ -83,7 +83,7 @@ Disable `require 'bootsnap/setup'` in config/boot.rb
 - generate models with rails g model
 - genereate controllers with rails g controller
 
-`rails g controllers api/v1/users`
+`rails g controller api/v1/users`
 
 - Setup the relationships
 - run migrations
