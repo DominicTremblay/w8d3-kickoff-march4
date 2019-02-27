@@ -9,3 +9,5 @@ Welcome to the w8d3 Final Project Kickoff!
 - [Rails React Setup](./rails_react_setup.md)
 
 - [Express React Setup](./express_react_setup.md)
+
+- [Tools](./tools.md)

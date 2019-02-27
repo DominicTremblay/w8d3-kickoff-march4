@@ -24,7 +24,7 @@ Make sure create-react-app is installed globally:
 - React front-end is running on port 3000
 - Rails back-end is running on port 3001 (or any other)
 
-      	rails s -p 3001 -b 0.0.0.0
+  `rails s -p 3001 -b 0.0.0.0`
 
 ## Cors
 
@@ -37,7 +37,7 @@ Make sure create-react-app is installed globally:
 
 Add a proxy to package.json:
 
-```
+```json
 {
   "name": "client",
   "version": "0.1.0",
@@ -52,7 +52,7 @@ Start the React Client with Yarn start
 
 Rails 5 with --api mode will prepare the setup for you. You just need to uncomment the following:
 
-```
+```ruby
 # Gemfile
 gem 'rack-cors'
 
@@ -69,9 +69,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-- Run Bundle install
-- Run rake db:reset and rake db:migrate
-- Start the back-end: rails s -p 3001 -b 0.0.0.0
+- Run `Bundle install`
+- Run `rake db:reset` and `rake db:migrate`
+- Start the back-end: `rails s -p 3001 -b 0.0.0.0`
 
 ** if you get this warning **
 warning: already initialized constant FileUtils::VERSION
@@ -81,6 +81,9 @@ Disable `require 'bootsnap/setup'` in config/boot.rb
 ## Create The Tables
 
 - generate models with rails g model
+
+`rails g model user name`
+
 - genereate controllers with rails g controller
 
 `rails g controller api/v1/users`
@@ -95,10 +98,10 @@ Disable `require 'bootsnap/setup'` in config/boot.rb
 
 - In routes.rb:
 
-```
+```ruby
 namespace :api do
     namespace :v1 do
-      resources :name_of_resource
+      resources :users
     end
 end
 ```
@@ -109,11 +112,13 @@ end
 - Move the controller files into this folder
 - Add namespacing to controllers:
 
-```
+```ruby
 class Api::V1::UsersController < ApplicationController
 
-		def index
-		end
+  def index
+    users = User.all
+    render json: users
+  end
 
 end
 ```
@@ -121,10 +126,10 @@ end
 ## Create an AJAX Request
 
 - Create a React Component in client/App.js
-- Install Axios
+- Install Axios `npm i axios --save`
 - In ComponentDidMount, create a request with Axios:
 
-```
+```javascript
 componentDidMount() {
   axios
     .get("http://localhost:3001/api/v1/resources.json")

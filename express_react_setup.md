@@ -2,7 +2,7 @@
 
 ## Install generator
 
-npm install -g express-generator
+`npm install -g express-generator`
 
 ## Install The Back-End
 
@@ -10,6 +10,8 @@ npm install -g express-generator
 - cd final-project-name && npm install
 - edit bin/www and change the port to 3001
 - add console.log to onListening and add a start script
+- create .gitignore
+- git init
 - install nodemon:
 
 `npm install nodemon --save-dev`
@@ -27,8 +29,8 @@ npm install -g express-generator
 - add dotenv (\* add to gitignore) npm install dotenv --save
 - require knex and dotenv in app.js
 
-  const knex = require("knex")(knexConfig["development"]);
-  require("dotenv").config();
+  `const knex = require("knex")(knexConfig["development"]);`
+  `require("dotenv").config();`
 
 - # install pg - npm install pg --save
 - install pg
@@ -83,7 +85,7 @@ Make sure create-react-app is installed globally:
 
 `npm i -g create-react-app`
 
-(make sure you have node 8.12.0)
+(make sure you have node 8.12.0 or above)
 
 ## Add a Request in ComponentDidMount of App
 
