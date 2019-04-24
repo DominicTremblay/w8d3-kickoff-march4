@@ -51,6 +51,31 @@ client: 'postgresql',
     },
 ```
 
+## Seeds
+
+- Create seed files for populating the database
+- Create seed file with `knex seed:make fileName`
+- Seeds are executed in alphabetical order, so you might want to precede filenames with a letter (ex.: a_addUsers.js, b_addPolls.js)
+- To restart auto increments at 1 each time the seed file runs, use Promise.all and ALTER SEQUENCE query:
+
+```js
+exports.seed = function(knex, Promise) {
+  return Promise.all([
+    knex('users').del(),
+    knex.raw('ALTER SEQUENCE users_id_seq RESTART WITH 1'),
+    knex('users').then(function() {
+      return Promise.all([
+        knex('users').insert({ name: 'Alice' }),
+        knex('users').insert({ name: 'Bob' }),
+        knex('users').insert({ name: 'Charlie' }),
+      ]);
+    }),
+  ]);
+};
+```
+
+- `npm install --save-dev faker` and require faker if fake data is needed.
+
 ## Test a Route
 
 - Add some JSON objects in the user route for testing. Run the server and test the route.

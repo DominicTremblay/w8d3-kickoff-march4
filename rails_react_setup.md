@@ -84,7 +84,7 @@ Disable `require 'bootsnap/setup'` in config/boot.rb
 
 `rails g model user name`
 
-- genereate controllers with rails g controller
+- generate controllers with rails g controller
 
 `rails g controller api/v1/users`
 
